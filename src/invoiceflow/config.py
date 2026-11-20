@@ -6,7 +6,7 @@ import os
 
 import boto3
 
-DEFAULT_REGION = "us-west-2"
+DEFAULT_REGION = "us-east-2"
 DEFAULT_API_KEY_PARAM = "/invoiceflow/dev/anthropic-api-key"
 
 

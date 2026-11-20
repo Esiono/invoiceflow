@@ -89,7 +89,7 @@ def usage_from_sdk(usage: Any) -> TokenUsage:
 def make_client(
     provider: Provider,
     *,
-    aws_region: str = "us-west-2",
+    aws_region: str = "us-east-2",
     api_key: str | None = None,
     max_retries: int = 4,
     timeout_s: float = 60.0,

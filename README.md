@@ -14,6 +14,6 @@ cost per run, 5-minute setup) ships with v1.0.
 ```bash
 uv sync
 uv run pytest -q
-export AWS_PROFILE=invoiceflow-admin AWS_REGION=us-west-2
+aws login --profile invoiceflow && export AWS_PROFILE=invoiceflow AWS_REGION=us-east-2
 uv run python scripts/smoke_llm.py --provider both --tier haiku
 ```
