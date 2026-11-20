@@ -1,0 +1,35 @@
+[project]
+name = "invoiceflow"
+version = "0.0.1"
+description = "Accounts-payable automation with evaluated extraction and approval-gated agent writes."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "anthropic[bedrock]>=2,<3",  # exact versions are pinned in uv.lock
+    "boto3>=1.35,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<9", "ruff>=0.6,<1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/invoiceflow"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["invoiceflow"]
