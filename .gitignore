@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+
+# Terraform (commit .terraform.lock.hcl, never state or tfvars)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+tfplan
+crash.log
+
+# Real invoices for the private eval set never go to git
+data/private/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
